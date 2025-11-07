@@ -61,16 +61,12 @@ public class ResearchOrchestrator implements ResearchService {
     // Executes a single research iteration
     private ResearchIteration executeResearchIteration(String topic, String instructions,
             String currentQuery, String accumulatedFindings, int iterationNum) throws ResearchException {
-        long iterationStart = System.currentTimeMillis();
-
         String findings = conductResearchIteration(currentQuery, instructions, iterationNum, accumulatedFindings);
         List<Source> sources = sourceExtractor.extractSourcesFromResponse(findings);
         List<String> gaps = identifyResearchGaps(topic, instructions, accumulatedFindings, iterationNum);
         List<String> followUpQueries = generateFollowUpQueries(topic, instructions, gaps, accumulatedFindings, iterationNum);
 
-        long iterationDuration = System.currentTimeMillis() - iterationStart;
-        return new ResearchIteration(iterationNum, currentQuery, findings, gaps, followUpQueries,
-            sources, iterationDuration);
+        return new ResearchIteration(iterationNum, findings, gaps, followUpQueries, sources);
     }
 
     // Updates accumulated findings with new iteration results

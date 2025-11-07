@@ -5,23 +5,19 @@ import java.util.List;
 // Represents a single iteration in the deep research process
 public class ResearchIteration {
     private final int iterationNumber;
-    private final String query;
     private final String findings;
     private final List<String> identifiedGaps;
     private final List<String> followUpQueries;
     private final List<Source> sources;
-    private final long durationMs;
 
-    public ResearchIteration(int iterationNumber, String query, String findings,
+    public ResearchIteration(int iterationNumber, String findings,
                              List<String> identifiedGaps, List<String> followUpQueries,
-                             List<Source> sources, long durationMs) {
+                             List<Source> sources) {
         this.iterationNumber = iterationNumber;
-        this.query = query;
         this.findings = findings;
         this.identifiedGaps = identifiedGaps;
         this.followUpQueries = followUpQueries;
         this.sources = sources;
-        this.durationMs = durationMs;
     }
 
     public int getIterationNumber() {

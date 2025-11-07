@@ -14,12 +14,10 @@ public final class PromptConstants {
 
     // Decision keywords from AI
     public static final String DECISION_CONTINUE = "CONTINUE";
-    public static final String DECISION_COMPLETE = "COMPLETE";
 
     // OpenAI API role constants
     public static final String ROLE_SYSTEM = "system";
     public static final String ROLE_USER = "user";
-    public static final String ROLE_ASSISTANT = "assistant";
 
     // Exit commands for conversation
     public static final String EXIT_DONE = "done";
