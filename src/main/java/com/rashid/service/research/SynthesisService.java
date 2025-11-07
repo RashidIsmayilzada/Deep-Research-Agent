@@ -29,11 +29,12 @@ public class SynthesisService {
             "Create a cohesive synthesis that:\n" +
             "1. Integrates findings from all iterations\n" +
             "2. Removes redundancy while preserving unique insights\n" +
-            "3. Maintains all citations and sources\n" +
-            "4. Presents a complete, authoritative overview\n" +
-            "5. Highlights areas where sources agree or disagree (contradictions)\n" +
-            "6. Organizes information logically with clear sections\n" +
-            "7. Addresses all identified gaps with discovered information\n\n" +
+            "3. Presents a complete, authoritative overview\n" +
+            "4. Highlights areas where sources agree or disagree (contradictions)\n" +
+            "5. Organizes information logically with clear sections\n" +
+            "6. Addresses all identified gaps with discovered information\n\n" +
+            "IMPORTANT: Do NOT include a separate 'Citations' or 'References' section at the end. " +
+            "Sources will be displayed automatically. Focus only on presenting the research findings and insights.\n\n" +
             "The final report should read as a unified, comprehensive research document.",
             topic, iterations.size(), allFindings.toString()
         );
@@ -53,7 +54,8 @@ public class SynthesisService {
             "- Significant trends and patterns\n" +
             "- Critical implications\n" +
             "- Any contradictions or ongoing debates\n\n" +
-            "Format as concise, impactful bullet points with specific numbers, dates, and facts.",
+            "Format as concise, impactful bullet points with specific numbers, dates, and facts.\n\n" +
+            "IMPORTANT: Do NOT include a 'Citations' or 'References' section. Sources are displayed separately.",
             topic, synthesis
         );
 

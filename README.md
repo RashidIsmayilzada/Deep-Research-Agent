@@ -21,11 +21,6 @@ Run the application:
 mvn exec:java -Dexec.mainClass="com.rashid.Main"
 ```
 
-Or run the compiled JAR:
-
-```bash
-java -jar target/Deep-Research-Agent-1.0-SNAPSHOT.jar
-```
 
 ## Configuration
 
