@@ -3,11 +3,16 @@
 A professional AI-powered research agent built with Java 21 that works like a **truly conversational research assistant**. The AI itself decides what questions to ask you (no pre-made choices), understands your needs, researches accordingly, and then has unlimited follow-up conversation with you.
 ## Setup
 
-1. Clone the repository
+1. **Create an OPENAI_API_KEY key in the .env file**
+   Example:
+```bash
+   OPENAI_API_KEY=sk-proj..... 
+``` 
+3. Clone the repository
 
-2. Configure your OpenAI API key in `src/main/resources/application.properties`:
+4. Configure your OpenAI API key in `src/main/resources/application.properties`:
 
-3. Build the project:
+5. Build the project:
 
 ```bash
 mvn clean install
